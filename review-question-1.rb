@@ -63,10 +63,10 @@ pokemon = [
 ]
 
 def find_be
-  pokemon. do |attributes|
-    attributes.find do |key|
-      if key == :base_experience && key > 40
-        p key[:base_experience]
+  pokemon.find do |attributes|
+    attributes.find do |key, value|
+      if key == :base_experience && key[value] > 40
+        p pokemon[attributes][:name]
       end
     end
   end
